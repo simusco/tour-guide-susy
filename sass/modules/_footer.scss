@@ -1,0 +1,20 @@
+.footer{
+	border-top:1px dashed #dfdfdf;
+	margin-top:30px;
+}
+
+.link-friendly{
+	@include simple-link();
+}
+
+.link-us{
+	@include simple-link($link-color : #3a84ac);
+}
+
+.copyright{
+	line-height:40px;
+	width:100%;
+	text-align:center;
+	background-color:#373636;
+	color:#666;
+}

@@ -11,128 +11,10 @@
 
 //Spacing
 @import "base/spacing";
-
-
-$main-page-color:#00a0b0;
-$susy: (
-  global-box-sizing: border-box
-);
-
-%btn{
-	@include inline-block();
-	padding:8px 15px;
-
-	&:hover{
-		background-color:#dfdfdf;
-	}
-
-	&.active{
-		background-color:#00a0b0;
-		color:#fff;
-	}
-}
-
-%link {
-  color: #333;
-  text-decoration: none;
-  cursor: pointer;
-  &:active, &:focus {
-    outline: none;
-    text-decoration: none;
-    color: #333;
-  }
-}
-
-%page-container{
-	@include container(1170px center);
-}
-
-.header{
-	@extend %page-container;
-}
-
-.top{
-	@include container;
-	background:#ccc image-url("index/logo.png") no-repeat left top;
-
-	&_logo{
-		@include span(6 of 10);
-
-		&--link{
-			@include inline-block();
-			height:88px;
-			width: 100%;
-		}
-	}
-
-	&_login{
-		@include span(4 of 10 last);
-		height: 88px;
-		position:relative;
-
-		>.login{
-			position: absolute;
-			top:50%;
-			margin-top:-17px;
-		}
-	}
-
-}
-
-.login{
-	@include inline-block-list();
-
-	&_btn{
-		&--default,
-		&--active{
-			@extend %link;
-			@extend %btn;
-		}
-
-		&--active,
-		&--active:hover{
-			background-color:#00a0b0;
-			color:#fff;
-		}
-	}
-
-}
-
-.navbar{
-	width:100%;
-	background-color : #00a0b0;
-}
-
-.nav-wraper{
-	@extend %page-container;
-}
-
-.nav{
-	@include inline-block-list();
-
-	&_item--default,
-	&_item--theme1{
-		> a{
-			@include inline-block();
-			@extend %link;
-		}
-	}
-
-	&_item--theme1{
-		> a{
-			padding-right:70px;
-			color:#fff;
-			line-height: 60px;
-			font-weight: 500;
-			font-size: 18px;
-
-			&:hover{
-				color:#74d7e1;
-			}
-		}
-	}
-
-}
+@import "base/variables";
+@import "base/mixins";
+@import "modules/header";
+@import "modules/footer";
 
 .content{
 	@extend %page-container;
@@ -221,19 +103,20 @@ $susy: (
 }
 
 .tag{
-	padding:7px 15px;
-
 	&--default{
-		color:#333;
+		@include tag();
 	}
 
 	&--out{
-		color:#f94b4b;
+		@include tag($color : #f94b4b);
 	}
 
 	&--stress{
-		color:#fff;
-		background-color : #f94b4b;
+		@include tag($color : #fff, $bg-color : #f94b4b);
+	}
+
+	&--divider{
+		@include tag($color : #333, $bg-color : #fff);
 	}
 }
 
@@ -244,58 +127,36 @@ $susy: (
 }
 
 .pagination{
-	@include inline-block-list();
-
-	&_item,
-	&_item--active{
-		@include inline-block();
-		@extend %btn;
-		@extend %link;
-		border:1px solid #dddddd;
-	}
-
-	&_item--active,
-	&_item--active:hover{
-		background-color:#00a0b0;
-		color:#fff;
-	}
-
+	@include pagination();
 }
 
-.footer{
-	border-top:1px dashed #dfdfdf;
-	margin-top:30px;
-}
-
-%link-simple{
-	line-height:40px;
-	text-align:center;
-
-	span,a{
-		@include inline-block();
+.route-filter{
+	&_cond,
+	&_tags,
+	&_result{
+		height: 45px;
+		line-height: 45px;
+		border-bottom:1px solid #dfdfdf;
 	}
 
-	a{
-		@extend %link;
+	&_tags{
+		
 	}
 }
 
-.link-friendly{
-	@extend %link-simple;
-}
+.route-order{
+	&_tags{
+		line-height: 80px;
+		height: 80px;
 
-.link-us{
-	@extend %link-simple;
-	
-	a{
-		color:#3a84ac;
+		.tag--divider{
+			border-left: 1px solid #dfdfdf;
+			padding-top:0px;
+			padding-bottom:0px;
+
+			&.active{
+				color : #f94b4b;
+			}
+		}
 	}
-}
-
-.copyright{
-	line-height:40px;
-	width:100%;
-	text-align:center;
-	background-color:#373636;
-	color:#666;
 }

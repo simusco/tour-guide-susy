@@ -1,0 +1,80 @@
+%page-container{
+	@include container(1170px center);
+}
+
+@mixin btn($padding : 8px 15px, $bg-hover-color : #dfdfdf, $bg-active-color : #00a0b0) {
+	@include inline-block();
+	padding:$padding;
+
+	&:hover{
+		background-color:$bg-hover-color;
+	}
+
+	&.active{
+		background-color:$bg-active-color;
+		color:#fff;
+	}
+}
+
+@mixin link($link-color : #333, $active-color : #333) {
+	color: $link-color;
+	text-decoration: none;
+	cursor: pointer;
+	&:active, &:focus {
+		outline: none;
+		text-decoration: none;
+		color: $active-color;
+	}
+}
+
+@mixin simple-link($line-height : 40px, $link-color : #3a84ac) {
+	line-height:$line-height;
+	text-align:center;
+
+	span,a{
+		@include inline-block();
+	}
+
+	a{
+		color: $link-color;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:active, &:focus {
+			outline: none;
+			text-decoration: none;
+			color: #333;
+		}
+	}
+}
+
+@mixin pagination($border-color : #dddddd, $bg-color : #00a0b0){
+	@include inline-block-list();
+
+	&_item,
+	&_item--active{
+		@include inline-block();
+		@include link();
+		@include btn();
+		border:1px solid $border-color;
+	}
+
+	&_item--active,
+	&_item--active:hover{
+		background-color:$bg-color;
+		color:#fff;
+	}
+
+}
+
+@mixin tag($padding : 7px 15px, $color : #333, $bg-color : #fff) {
+	padding : $padding;
+	color : $color;
+	background-color : $bg-color;
+	text-decoration : none;
+
+	&:hover{
+		text-decoration : none;
+		color:$color;
+	}
+}

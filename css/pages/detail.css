@@ -354,33 +354,6 @@ th {
   margin-left: 20px !important;
 }
 
-.login_btn--default, .login_btn--active, .pagination_item, .pagination_item--active {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  padding: 8px 15px;
-}
-.login_btn--default:hover, .login_btn--active:hover, .pagination_item:hover, .pagination_item--active:hover {
-  background-color: #dfdfdf;
-}
-.active.login_btn--default, .active.login_btn--active, .active.pagination_item, .active.pagination_item--active {
-  background-color: #00a0b0;
-  color: #fff;
-}
-
-.login_btn--default, .login_btn--active, .nav_item--default > a, .nav_item--theme1 > a, .pagination_item, .pagination_item--active, .link-friendly a, .link-us a {
-  color: #333;
-  text-decoration: none;
-  cursor: pointer;
-}
-.login_btn--default:active, .login_btn--active:active, .nav_item--default > a:active, .nav_item--theme1 > a:active, .pagination_item:active, .pagination_item--active:active, .link-friendly a:active, .link-us a:active, .login_btn--default:focus, .login_btn--active:focus, .nav_item--default > a:focus, .nav_item--theme1 > a:focus, .pagination_item:focus, .pagination_item--active:focus, .link-friendly a:focus, .link-us a:focus {
-  outline: none;
-  text-decoration: none;
-  color: #333;
-}
-
 .header, .nav-wraper, .content, .pagebar {
   max-width: 1170px;
   margin-left: auto;
@@ -448,6 +421,29 @@ th {
   *display: inline;
   white-space: nowrap;
 }
+.login_btn--default, .login_btn--active {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+.login_btn--default:hover, .login_btn--active:hover {
+  background-color: #dfdfdf;
+}
+.login_btn--default.active, .login_btn--active.active {
+  background-color: #00a0b0;
+  color: #fff;
+}
+.login_btn--default:active, .login_btn--default:focus, .login_btn--active:active, .login_btn--active:focus {
+  outline: none;
+  text-decoration: none;
+  color: #333;
+}
 .login_btn--active, .login_btn--active:hover {
   background-color: #00a0b0;
   color: #fff;
@@ -482,6 +478,14 @@ th {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav_item--default > a:active, .nav_item--default > a:focus, .nav_item--theme1 > a:active, .nav_item--theme1 > a:focus {
+  outline: none;
+  text-decoration: none;
+  color: #333;
 }
 .nav_item--theme1 > a {
   padding-right: 70px;
@@ -492,6 +496,63 @@ th {
 }
 .nav_item--theme1 > a:hover {
   color: #74d7e1;
+}
+
+.footer {
+  border-top: 1px dashed #dfdfdf;
+  margin-top: 30px;
+}
+
+.link-friendly {
+  line-height: 40px;
+  text-align: center;
+}
+.link-friendly span, .link-friendly a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+.link-friendly a {
+  color: #3a84ac;
+  text-decoration: none;
+  cursor: pointer;
+}
+.link-friendly a:active, .link-friendly a:focus {
+  outline: none;
+  text-decoration: none;
+  color: #333;
+}
+
+.link-us {
+  line-height: 40px;
+  text-align: center;
+}
+.link-us span, .link-us a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+.link-us a {
+  color: #3a84ac;
+  text-decoration: none;
+  cursor: pointer;
+}
+.link-us a:active, .link-us a:focus {
+  outline: none;
+  text-decoration: none;
+  color: #333;
+}
+
+.copyright {
+  line-height: 40px;
+  width: 100%;
+  text-align: center;
+  background-color: #373636;
+  color: #666;
 }
 
 .content {
@@ -591,18 +652,45 @@ th {
   white-space: nowrap;
 }
 
-.tag {
-  padding: 7px 15px;
-}
 .tag--default {
+  padding: 7px 15px;
+  color: #333;
+  background-color: #fff;
+  text-decoration: none;
+}
+.tag--default:hover {
+  text-decoration: none;
   color: #333;
 }
 .tag--out {
+  padding: 7px 15px;
+  color: #f94b4b;
+  background-color: #fff;
+  text-decoration: none;
+}
+.tag--out:hover {
+  text-decoration: none;
   color: #f94b4b;
 }
 .tag--stress {
+  padding: 7px 15px;
   color: #fff;
   background-color: #f94b4b;
+  text-decoration: none;
+}
+.tag--stress:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.tag--divider {
+  padding: 7px 15px;
+  color: #333;
+  background-color: #fff;
+  text-decoration: none;
+}
+.tag--divider:hover {
+  text-decoration: none;
+  color: #333;
 }
 
 .pagebar {
@@ -634,38 +722,49 @@ th {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  padding: 8px 15px;
   border: 1px solid #dddddd;
+}
+.pagination_item:active, .pagination_item:focus, .pagination_item--active:active, .pagination_item--active:focus {
+  outline: none;
+  text-decoration: none;
+  color: #333;
+}
+.pagination_item:hover, .pagination_item--active:hover {
+  background-color: #dfdfdf;
+}
+.pagination_item.active, .pagination_item--active.active {
+  background-color: #00a0b0;
+  color: #fff;
 }
 .pagination_item--active, .pagination_item--active:hover {
   background-color: #00a0b0;
   color: #fff;
 }
 
-.footer {
-  border-top: 1px dashed #dfdfdf;
-  margin-top: 30px;
+.route-filter_cond, .route-filter_tags, .route-filter_result {
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #dfdfdf;
 }
 
-.link-friendly, .link-us {
-  line-height: 40px;
-  text-align: center;
+.route-order_tags {
+  line-height: 80px;
+  height: 80px;
 }
-.link-friendly span, .link-us span, .link-friendly a, .link-us a {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
+.route-order_tags .tag--divider {
+  border-left: 1px solid #dfdfdf;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
-
-.link-us a {
-  color: #3a84ac;
-}
-
-.copyright {
-  line-height: 40px;
-  width: 100%;
-  text-align: center;
-  background-color: #373636;
-  color: #666;
+.route-order_tags .tag--divider.active {
+  color: #f94b4b;
 }
