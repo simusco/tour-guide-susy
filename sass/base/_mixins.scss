@@ -5,6 +5,8 @@
 @mixin btn($padding : 8px 15px, $bg-hover-color : #dfdfdf, $bg-active-color : #00a0b0) {
 	@include inline-block();
 	padding:$padding;
+	border : none;
+	line-height:normal;
 
 	&:hover{
 		background-color:$bg-hover-color;
@@ -77,4 +79,44 @@
 		text-decoration : none;
 		color:$color;
 	}
+}
+
+@mixin tool($font-color : #999, $background : #fff) {
+	@include inline-block();
+	padding:7px 10px;
+	color: $font-color;
+	background:$background;
+}
+
+@mixin article-content($line-height : 24px) {
+	&__title{
+		display: block;
+		font-size: 120%;
+	}
+
+	&__desc{
+		line-height: $line-height;
+		letter-spacing: 1px;
+		text-indent: $line-height * 1.5;
+	}
+
+	&__img{
+
+		> img{
+			width: 100%;
+			height: auto;
+			margin-top: 10px;
+		}
+
+	}
+}
+
+@mixin element-center($image-width, $image-height) {
+	width: $image-width;
+	height: $image-height;
+	margin-top: -#{$image-height/2};
+	margin-left: -#{$image-width/2};
+	position: absolute;
+	top:50%;
+	left:50%;
 }

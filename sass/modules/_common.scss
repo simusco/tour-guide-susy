@@ -1,0 +1,63 @@
+.tag{
+	&--default{
+		@include tag();
+	}
+
+	&--out{
+		@include tag($color : #f94b4b);
+	}
+
+	&--stress{
+		@include tag($color : #fff, $bg-color : #f94b4b);
+	}
+
+	&--divider{
+		@include tag($color : #333, $bg-color : #fff);
+
+		>a{
+
+		}
+	}
+
+	&--selected{
+		@include tag($color : #333, $bg-color : #fff);
+		border:1px dashed #999;
+		font-size: 85%;
+	}
+
+	&--removeable{
+		@include tag($color : #333, $bg-color : #fff);
+		border:1px dashed #999;
+		background: #fff image-url("query/del.png") no-repeat right center;
+		font-size: 85%;
+	}
+
+	&--price{
+		@include tag($color : #f94b4b, $bg-color : none);
+		font-size: 24px;
+		font-weight: 700;
+	}
+}
+
+.font-1x{font-size : 12px}
+.font-2x{font-size : 14px}
+.font-3x{font-size : 16px}
+.font-4x{font-size : 18px}
+.font-5x{font-size : 24px}
+
+.tag-line{
+	&--default{
+		@include inline-block-list();
+	}
+}
+
+.bread-crumb{
+	@include inline-block-list();
+
+	a{
+		@include link();
+		&:hover{
+			color : #00a0b0;
+		}
+	}
+}
