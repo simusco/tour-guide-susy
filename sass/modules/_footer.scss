@@ -11,10 +11,19 @@
 	@include simple-link($link-color : #3a84ac);
 }
 
-.copyright{
+.copyright,
+.copyright--login
+{
 	line-height:40px;
 	width:100%;
 	text-align:center;
-	background-color:#373636;
 	color:#666;
+}
+
+.copyright{
+	background-color:#373636;
+
+	&--login{
+		background-color:none;
+	}
 }

@@ -579,7 +579,7 @@ th {
   background-color: #fff;
   text-decoration: none;
   border: 1px dashed #999;
-  background: #fff url('../../images/query/del.png?1445328059') no-repeat right center;
+  background: #fff url('../../images/query/del.png?1445959946') no-repeat right center;
   font-size: 85%;
 }
 .tag--removeable:hover {
@@ -674,7 +674,7 @@ th {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: #ccc url('../../images/index/logo.png?1445242453') no-repeat left top;
+  background: #ccc url('../../images/index/logo.png?1445959946') no-repeat left top;
 }
 .top:after {
   content: " ";
@@ -854,12 +854,19 @@ th {
   color: #333;
 }
 
-.copyright {
+.copyright,
+.copyright--login {
   line-height: 40px;
   width: 100%;
   text-align: center;
-  background-color: #373636;
   color: #666;
+}
+
+.copyright {
+  background-color: #373636;
+}
+.copyright--login {
+  background-color: none;
 }
 
 .content__topic {
@@ -899,16 +906,16 @@ th {
 }
 
 .package-icon--hot {
-  background: url('../../images/index/hot-icon01.png?1445224442') no-repeat center left;
+  background: url('../../images/index/hot-icon01.png?1445959946') no-repeat center left;
 }
 .package-icon--spot {
-  background: url('../../images/index/hot-icon02.png?1445224445') no-repeat center left;
+  background: url('../../images/index/hot-icon02.png?1445959946') no-repeat center left;
 }
 .package-icon--topic {
-  background: url('../../images/index/hot-icon03.png?1445224447') no-repeat center left;
+  background: url('../../images/index/hot-icon03.png?1445959946') no-repeat center left;
 }
 .package-icon--4reason {
-  background: url('../../images/index/hot-icon04.png?1445224450') no-repeat center left;
+  background: url('../../images/index/hot-icon04.png?1445959946') no-repeat center left;
 }
 
 .package__title {
@@ -1145,12 +1152,12 @@ th {
 .ctrlbar__btn--left {
   top: 0px;
   left: 0px;
-  background: #333 url('../../images/index/btn-left.png?1444375603') no-repeat center center;
+  background: #333 url('../../images/index/btn-left.png?1445959946') no-repeat center center;
 }
 .ctrlbar__btn--right {
   top: 0px;
   right: 0px;
-  background: #333 url('../../images/index/btn-right.png?1444375624') no-repeat center center;
+  background: #333 url('../../images/index/btn-right.png?1445959946') no-repeat center center;
 }
 
 .advertise {
@@ -1161,7 +1168,7 @@ th {
   position: relative;
   left: 0px;
   top: 0px;
-  background: #fff url('../../images/index/banner1.png?1445833105') no-repeat center center;
+  background: #fff url('../../images/index/banner1.png?1445959946') no-repeat center center;
   width: 100%;
   height: 500px;
 }

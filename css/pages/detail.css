@@ -579,7 +579,7 @@ th {
   background-color: #fff;
   text-decoration: none;
   border: 1px dashed #999;
-  background: #fff url('../../images/query/del.png?1445328059') no-repeat right center;
+  background: #fff url('../../images/query/del.png?1445959946') no-repeat right center;
   font-size: 85%;
 }
 .tag--removeable:hover {
@@ -674,7 +674,7 @@ th {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: #ccc url('../../images/index/logo.png?1445242453') no-repeat left top;
+  background: #ccc url('../../images/index/logo.png?1445959946') no-repeat left top;
 }
 .top:after {
   content: " ";
@@ -854,12 +854,19 @@ th {
   color: #333;
 }
 
-.copyright {
+.copyright,
+.copyright--login {
   line-height: 40px;
   width: 100%;
   text-align: center;
-  background-color: #373636;
   color: #666;
+}
+
+.copyright {
+  background-color: #373636;
+}
+.copyright--login {
+  background-color: none;
 }
 
 .content__spot {
@@ -890,7 +897,7 @@ th {
   *display: inline;
   line-height: 60px;
   padding-left: 55px;
-  background: #fff url('../../images/detail/buy-need-know.png?1445585341') no-repeat left center;
+  background: #fff url('../../images/detail/buy-need-know.png?1445959946') no-repeat left center;
   color: #333;
   font-weight: 700;
 }
@@ -915,10 +922,10 @@ th {
   margin-left: 15px;
 }
 .panel__title--buyknow {
-  background: #fff url('../../images/detail/buy-need-know.png?1445585341') no-repeat left center;
+  background: #fff url('../../images/detail/buy-need-know.png?1445959946') no-repeat left center;
 }
 .panel__title--recplan {
-  background: #fff url('../../images/detail/rec-plan.png?1445585397') no-repeat left center;
+  background: #fff url('../../images/detail/rec-plan.png?1445959946') no-repeat left center;
 }
 .panel__title--theme1 {
   border-bottom: 1px dashed #dfdfdf;
@@ -1217,13 +1224,13 @@ th {
   clear: both;
 }
 .img-control__btn--left {
-  background: #dddddd url('../../images/detail/left-btn.png?1445581631') no-repeat center;
+  background: #dddddd url('../../images/detail/left-btn.png?1445959946') no-repeat center;
   position: absolute;
   left: 0px;
   top: 0px;
 }
 .img-control__btn--right {
-  background: #dddddd url('../../images/detail/right-btn.png?1445581656') no-repeat center;
+  background: #dddddd url('../../images/detail/right-btn.png?1445959946') no-repeat center;
   position: absolute;
   right: 0px;
   top: 0px;
