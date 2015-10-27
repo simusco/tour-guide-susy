@@ -1,0 +1,117 @@
+//Compass
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
+
+//Normalize
+@import "normalize";
+
+//Layout grid.
+@import "susy";
+
+//Spacing
+@import "base/spacing";
+@import "base/variables";
+@import "base/mixins";
+@import "base/grid";
+
+@import "modules/common";
+@import "modules/header";
+@import "modules/footer";
+
+.content{
+	@extend %page-container;
+}
+
+.panel{
+	border: 1px solid #dfdfdf;
+	width: 100%;
+
+	&--theme1{
+		border:none;
+	}
+
+	&__title{
+		border-bottom: 1px solid #dfdfdf;
+		font-size: 18px;
+		line-height: 36px;
+		color: #333;
+		font-weight: 700;
+
+		&--lcolor{
+			border-left: 3px solid #18a0af;
+			padding-left: 5px;
+			margin-left: 15px;
+		}
+	}
+
+	&__title{
+		&--theme1{
+			border-bottom: 1px dashed #dfdfdf;
+		}
+	}
+
+	&__content{
+		padding:10px 3%;
+
+		> .tag-line{
+			height: 30px;
+		}
+	}
+}
+
+.order-progress{
+	width: 100%;
+	padding-top: 30px;
+	height: 30px;
+	margin-bottom: 30px;
+
+	&__item{
+		list-style: none;
+		padding:0px;
+		margin:0px;
+		height: 6px;
+		width: 200px;
+
+		position:relative;
+		float: left;
+
+		background-color:#18a0af;
+
+		&.first,
+		&.last{
+			width: 120px;
+		}
+	}
+
+}
+
+.disc{
+	@include inline-block();
+	@include border-radius(50%);
+
+	background-color:#18a0af;
+	border:2px solid #d0d0d0;
+	overflow: hidden;
+	width:14px;
+	height:14px;
+}
+
+.step-text{
+	position: absolute;
+	top: -8px;
+	right: 0;
+	width: 16px;
+	height: 16px;
+
+	>p{
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		width: 200px;
+		margin: 10px 0 0 -100px;
+		color: #666;
+		font-size: 14px;
+		text-align: center;
+	}
+}
