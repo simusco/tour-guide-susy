@@ -120,3 +120,39 @@
 	top:50%;
 	left:50%;
 }
+
+@mixin simple-input($width, $height){
+	@include inline-block();
+
+	padding-left:5px;
+	outline: none;
+	box-shadow: none;
+	border:none;
+
+	width : $width;
+	height : $height;
+}
+
+@mixin icon-input($width, $height, $icon-width : 30px, $font-size : 22px){
+	@include inline-block();
+	@include border-radius(4px);
+	@include container($width);
+	border:1px solid #dfdfdf;
+
+	&__icon{
+		@include inline-block();
+		height:$height * 1.5;
+		line-height: $height * 1.5;
+		width: $icon-width;
+		color: #999;
+		text-align: center;
+		font-size: $font-size;
+	}
+
+	&__input{
+		@include simple-input($width - 10 - $icon-width, $height);
+
+		line-height: $font-size;
+		border-left:1px solid #dfdfdf;
+	}
+}

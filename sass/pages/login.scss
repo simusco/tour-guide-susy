@@ -14,6 +14,7 @@
 @import "base/variables";
 @import "base/mixins";
 @import "base/grid";
+@import "base/alignment";
 
 @import "modules/common";
 @import "modules/header";
@@ -30,7 +31,7 @@
 		>.login{
 			position: absolute;
 			top: 50%;
-			margin-top:-135px;
+			margin-top:-215px;
 			right:120px;
 		}
 	}
@@ -50,24 +51,14 @@
 }
 
 .toolbar{
-	border-bottom:1px dashed #dfdfdf;
-	height:55px;
-	line-height:55px;
+	background-color:#49cbcd;
+	height:45px;
+	line-height:45px;
 
 	&__title{
 		font-size: 18px;
 		font-weight: 700;
-		padding-left:25px;
-	}
-
-	&__btn{
-
-		>a{
-			@include link();
-			color:#999;
-			font-size: 14px;
-		}
-
+		color: #fff;
 	}
 }
 
@@ -75,48 +66,13 @@
 	@include container();
 
 	&__title{
-		@include span(60 of 100);
-	}
-
-	&__btn{
-		@include span(40 of 100 last);
-	}
-}
-
-.login-form{
-
-	&__row{
-		margin-top:30px;
+		@include span(100 of 100);
 		text-align: center;
 	}
-
 }
 
 .input-icon{
-	@include inline-block();
-	@include border-radius(4px);
-	@include container();
-	border:1px solid #dfdfdf;
-
-	&__icon{
-		@include inline-block();
-		background-color:#ededee;
-		height:40px;
-		line-height: 40px;
-		width: 50px;
-		color: #999;
-		text-align: center;
-	}
-
-	&__input{
-		@include inline-block();
-		padding:0px;
-		height:38px;
-		width: 200px;
-		border:none;
-		font-size: 18px;
-		line-height: 38px;
-	}
+	@include icon-input(280px, 24px);
 }
 
 
@@ -124,9 +80,11 @@
 	&--login{
 		@include inline-block();
 		@include border-radius(4px);
+
+		width: 279px;
+		height: 45px;
+
 		border:1px solid #fff;
-		width: 250px;
-		height: 40px;
 		background-color:#f64d50;
 		color:#fff;
 	}

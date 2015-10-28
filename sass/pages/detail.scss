@@ -191,6 +191,8 @@
 
 		>.ticket-name{
 			@include element-center(300px, 46px);
+			margin-left: 0px;
+			left: 0%;
 		}
 	}
 
